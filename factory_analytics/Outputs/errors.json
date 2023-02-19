@@ -1,0 +1,15 @@
+{
+    "Name": "errors",
+    "DataSourceType": "Table Storage",
+    "TableStorageProperties": {
+        "AccountName": "storageforfactory",
+        "AccountKey": null,
+        "Table": "errors",
+        "PartitionKey": "PartitionKey",
+        "RowKey": "RowKey",
+        "BatchSize": 100,
+        "ColumnsToRemove": null
+    },
+    "DataSourceCredentialDomain": "cdafdccc-607b-4b23-86a4-b2de46b05392.StreamAnalystics",
+    "ScriptType": "Output"
+}

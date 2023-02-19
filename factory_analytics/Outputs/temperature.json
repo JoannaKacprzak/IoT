@@ -1,0 +1,15 @@
+{
+    "Name": "temperature",
+    "DataSourceType": "Table Storage",
+    "TableStorageProperties": {
+        "AccountName": "storageforfactory",
+        "AccountKey": null,
+        "Table": "temperature",
+        "PartitionKey": "PartitionKey",
+        "RowKey": "RowKey",
+        "BatchSize": 100,
+        "ColumnsToRemove": null
+    },
+    "DataSourceCredentialDomain": "077d5d4d-9625-4daa-93c1-c294c0614591.StreamAnalystics",
+    "ScriptType": "Output"
+}

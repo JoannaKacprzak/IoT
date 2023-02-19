@@ -1,0 +1,38 @@
+{
+    "name": "factory_analytics",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "Functions/guidGenerator.js.json",
+            "subType": "JSFunction"
+        },
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Outputs/production-kpi.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/emergency-errors.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/temperature.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/production-sum.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/errors.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Inputs/agentInput.json",
+            "subType": "Input"
+        }
+    ]
+}

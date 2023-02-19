@@ -1,0 +1,15 @@
+{
+    "Name": "production-kpi",
+    "DataSourceType": "Table Storage",
+    "TableStorageProperties": {
+        "AccountName": "storageforfactory",
+        "AccountKey": null,
+        "Table": "productionKPI",
+        "PartitionKey": "PartitionKey",
+        "RowKey": "RowKey",
+        "BatchSize": 100,
+        "ColumnsToRemove": null
+    },
+    "DataSourceCredentialDomain": "171da757-6ea1-4393-900d-2b08470995c1.StreamAnalystics",
+    "ScriptType": "Output"
+}

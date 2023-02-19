@@ -1,0 +1,15 @@
+{
+    "Name": "emergency-errors",
+    "DataSourceType": "Table Storage",
+    "TableStorageProperties": {
+        "AccountName": "storageforfactory",
+        "AccountKey": null,
+        "Table": "emergencyErrors",
+        "PartitionKey": "PartitionKey",
+        "RowKey": "RowKey",
+        "BatchSize": 100,
+        "ColumnsToRemove": null
+    },
+    "DataSourceCredentialDomain": "aaf5d246-c3cd-4263-a996-af4e6c8462d9.StreamAnalystics",
+    "ScriptType": "Output"
+}

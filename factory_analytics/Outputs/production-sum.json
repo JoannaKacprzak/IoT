@@ -1,0 +1,15 @@
+{
+    "Name": "production-sum",
+    "DataSourceType": "Table Storage",
+    "TableStorageProperties": {
+        "AccountName": "storageforfactory",
+        "AccountKey": null,
+        "Table": "productionSum",
+        "PartitionKey": "PartitionKey",
+        "RowKey": "RowKey",
+        "BatchSize": 100,
+        "ColumnsToRemove": null
+    },
+    "DataSourceCredentialDomain": "abd6d1f9-8661-4464-a00a-c52b5b198720.StreamAnalystics",
+    "ScriptType": "Output"
+}

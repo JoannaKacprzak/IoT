@@ -1,0 +1,92 @@
+WITH production AS (
+    SELECT
+    deviceId,
+        SUM(CountGood) as GoodCount,
+        SUM(CountGood + CountBad) as TotalCount
+    FROM
+        [agentInput]
+    GROUP BY
+        deviceId,
+        TumblingWindow(minute, 15)
+), 
+production_percentage AS (
+    SELECT
+        deviceId,
+        GoodCount,
+        TotalCount,
+        100.0 * GoodCount / NULLIF(TotalCount, 0) AS 'Percentage',
+        System.Timestamp() AS Timestamp,
+        udf.guidGenerator(null) AS RowKey,
+        '1' AS PartitionKey
+    FROM
+        production
+)
+SELECT
+    *
+INTO
+    [production-kpi]
+FROM
+    production_percentage;
+
+
+SELECT
+    workOrderId as 'WorkOrderId',
+    SUM(CountGood) AS 'GoodCount',
+    SUM(CountBad) AS 'BadCount',
+    System.Timestamp() AS Timestamp,
+    udf.guidGenerator(null) AS RowKey,
+    '1' AS PartitionKey
+INTO
+   [production-sum]
+FROM
+   [agentInput]
+GROUP BY
+    workOrderId,
+    TumblingWindow(minute, 15);
+
+SELECT
+    workOrderId,
+    MIN(temperature) as 'MinTemperature',
+    MAX(temperature) as 'MaxTemperature',
+    AVG(temperature) as 'AvgTemperature',
+    System.Timestamp() AS Timestamp,
+    udf.guidGenerator(null) AS RowKey,
+    '1' AS PartitionKey
+INTO
+    [temperature]
+FROM
+    [agentInput]
+GROUP BY
+    WorkOrderId,
+    TumblingWindow(Duration(minute, 5));
+
+SELECT
+    deviceId,
+    COUNT(*) AS ErrorsCount,
+    System.Timestamp() AS Timestamp,
+    udf.guidGenerator(null) AS RowKey,
+    '1' AS PartitionKey
+INTO
+    [errors]
+FROM
+    [agentInput]
+WHERE
+    deviceError != 0
+GROUP BY
+    deviceId,
+    TumblingWindow(minute, 30);
+
+SELECT
+    deviceId,
+    COUNT(*) AS EmergencyErrors
+INTO 
+    [emergency-errors]
+FROM
+    [agentInput]
+WHERE
+    deviceError != 0
+GROUP BY
+    deviceId,
+    TumblingWindow(minute, 15)
+HAVING
+    COUNT(*) > 3;
