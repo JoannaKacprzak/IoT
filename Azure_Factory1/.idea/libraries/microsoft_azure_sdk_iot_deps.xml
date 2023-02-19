@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="microsoft.azure.sdk.iot.deps" type="repository">
+    <properties maven-id="com.microsoft.azure.sdk.iot:iot-deps:0.2.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/iot-deps-0.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proton-j-0.34.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.json-1.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

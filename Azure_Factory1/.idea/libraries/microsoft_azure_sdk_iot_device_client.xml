@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="microsoft.azure.sdk.iot.device.client" type="repository">
+    <properties maven-id="com.microsoft.azure.sdk.iot:iot-device-client:1.6.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/iot-device-client-1.6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/proton-j-0.23.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/iot-deps-0.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.json-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/azure-storage-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.paho.client.mqttv3-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bcprov-jdk16-1.46.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/security-provider-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
