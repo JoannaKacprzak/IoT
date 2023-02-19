@@ -11,3 +11,5 @@ Cloud device - kod definiujący klasę CloudDevice, która reprezentuje urządze
 Machine - kod definiujący klasę Java o nazwie "Machine", która reprezentuje fizyczną maszynę i zawiera informacje o jej statusie produkcyjnym, identyfikatorze zlecenia roboczego, tempie produkcji, liczbie dobrych i złych jednostek, temperaturze, błędzie urządzenia oraz obiekcie CloudDevice, który przechowuje ciąg połączenia urządzenia. Zawiera również obiekt DeviceClient do nawiązania połączenia z Azure IoT Hub.
 
 MachineDto - kod definiujący klasę MachineDTO, która reprezentuje obiekt transferu danych dla maszyny w linii produkcyjnej. Zawiera różne właściwości związane z maszyną, takie jak jej identyfikator urządzenia, identyfikator zlecenia roboczego, tempo produkcji, błąd urządzenia, temperaturę oraz liczbę wyprodukowanych dobrych i złych jednostek. Zawiera również właściwość timestamp wskazującą, kiedy dane zostały zebrane.
+
+factory_analytics - export z Azure Stream Analytics job
